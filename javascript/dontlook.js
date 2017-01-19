@@ -27,7 +27,7 @@ jQuery.fn.shake = function() {
 }
 
 $(function () {
-  $(this).scrollTop(0);
+  $(document).scrollTop(0);
 	$('body').addClass('no-scroll');
   $('section').smoothScroll({
     delegateSelector: 'a.down-arrow'

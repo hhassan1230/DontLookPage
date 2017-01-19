@@ -127,10 +127,10 @@ section.pictures {
 
 .video-wrapper iframe {
  position: absolute;
- top: 0;
+ top: 10%;
  left: 0;
  width: 100%;
- height: 100%;
+ height: 80%;
 }
 	.video-wrapper{
 		position: relative;
@@ -145,8 +145,15 @@ section.pictures {
   text-align: center;
   height: 32px;
   width: 64px;
-  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/OVUuqScHe6J.png") no-repeat;
+  background: url("//static.xx.fbcdn.net/rsrc.php/v3/yA/r/OVUuqScHe6J.png") no-repeat;
   background-position: 0 -32px;
+}
+
+.gear-tag {
+	  background: url("../images/Logo_Samsung_Gear_VR.png") no-repeat;
+    height: 140px;
+    width: 184px;
+
 }
 
 @media only screen and (max-width: 1200px) {
