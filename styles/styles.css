@@ -1,38 +1,48 @@
-html, body {
-  padding: 0;
-  margin: 0;
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 
+* {
+  box-sizing: border-box;
 }
 
-.vr-frame {
+body {
+  margin: 0;
+  background: black;
+  overflow-x: hidden;
+}
+
+a {
+  transition: all 500ms;
+}
+
+a:link, a:visited {
+  color: white;
+}
+
+a:hover, a:active {
+  color: purple;
+  text-decoration: none;
+}
+
+section {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
-  color: white;
   position: relative;
-/*   overflow: hidden; */
-  overflow-x: hidden; 
-  overflow-y: auto; 
+  overflow: hidden;
+  color: white;
 }
+
 .down-arrow{
   position: absolute;
   bottom: 2%;
   z-index: 1;
 }
-.scrolling{
-  overflow: auto;
-}
-#trailerDLA{
-  position:absolute;
-  top: 100%;
-}
-
 
 .vr-view {
   position: fixed;
+  left: 0;
   z-index: 0;
   transform: scale(0.15);
   width: 100%;
@@ -43,36 +53,42 @@ html, body {
   z-index: 1;
   margin-top: -20px;
 }
+
 .expand {
-    transform: scale(1);
-    transition: all 2s ease-in-out; 
+  transform: scale(1);
+  transition: all 2s ease-in-out;
 }
 
 .expand-goggles {
-    transform: scale(5);
-    transition: all 1.9s ease-in-out; 
+  transform: scale(5);
+  transition: all 1.9s ease-in-out;
+}
+
+.transparent {
+  opacity: 0;
 }
 
 .fadeout {
-    opacity: 0;
-    transition: all 2s ease-in-out; 
+  opacity: 0;
+  transition: all 2s ease-in-out;
 }
-.text {
-  postion: absolute;
+
+.transparent.fadein {
+  opacity: 1;
+  transition: all 4.4s ease-in-out;
+}
+
+.text-panel {
+  padding: 1.5%;
+  position: absolute;
   z-index: 2;
   border: 1px solid white;
-  width: 20%;
-  margin-left: 60%;
-  opacity: 0;
+  width: 25%;
+  left: 70%;
   border-radius: 25px;
   background: grey;
   text-align: center;
   font-family: Avenir;
-}
-
-.fadein {
-    opacity: 1;
-    transition: all 4.4s ease-in-out; 
 }
 
 .oculus {
@@ -81,9 +97,6 @@ html, body {
   text-align: center;
   height: 32px;
   width: 64px;
-background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/OVUuqScHe6J.png") no-repeat; 
+  background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/OVUuqScHe6J.png") no-repeat;
   background-position: 0 -32px;
-}
-.trailer{
-  text-align: center;
 }
