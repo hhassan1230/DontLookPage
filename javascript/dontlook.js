@@ -6,7 +6,7 @@
 $(window).on("load", function() {
   $('.vr-view').addClass('expand');
   $('.vr-goggles').addClass('fadeout expand-goggles');
-  $('.text-panel').addClass('fadein');
+  $('.text-panel, .down-arrow').addClass('fadein');
 });
 
 jQuery.fn.shake = function() {
@@ -23,5 +23,5 @@ $(function () {
   $('section').smoothScroll({
     delegateSelector: 'a.down-arrow'
   });
-  $('a.down-arrow i').delay(2000).shake();
+  $('a.down-arrow i').delay(2500).shake();
 });
