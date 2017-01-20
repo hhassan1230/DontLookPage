@@ -139,6 +139,15 @@ section.pictures {
 	 height: 0; 
 	 width: 90%;
 	}
+
+.title-section {
+	position: absolute;
+	top: 0%;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
 .oculus {
   display: inline-block;
   z-index: 2;
@@ -151,15 +160,24 @@ section.pictures {
 
 .gear-tag {
 	  background: url("../images/Logo_Samsung_Gear_VR.png") no-repeat;
-    height: 140px;
+    height: 145px;
     width: 184px;
+		background-size: 184px 184px;
+}
 
+@media only screen and (max-width: 1500px) {
+	.title-section {
+		top: 5%;
+	}
 }
 
 @media only screen and (max-width: 1200px) {
 	.text-panel {
 		width: 40%;
 		left: 55%;
+	}
+	.title-section {
+		top: 10%;
 	}
 }
 
@@ -175,6 +193,9 @@ section.pictures {
 	}
 	.expand {
 	  transform: scale(1);
+	}
+	.title-section {
+		top: 20%;
 	}
 }
 
