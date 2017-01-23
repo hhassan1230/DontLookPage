@@ -91,7 +91,7 @@ section {
 
 .vr-view {
   position: fixed;
-  top: 0;
+  top: -10%;
   left: 0;
   right: 0;
   z-index: -1;
@@ -159,6 +159,12 @@ iframe {
   max-width: 606px;
   min-height: 263px;
   max-height: 455px;
+}
+
+@media only screen and (min-width: 1600px) {
+  .vr-view {
+    top: -30%;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
